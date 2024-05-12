@@ -1,0 +1,18 @@
+#Use an official Node runtime as a parent image, which is built on top of a linux image. 
+FROM node:18
+
+#Working Directory  
+WORKDIR /app 
+
+COPY package*.json ./
+
+RUN apt-get update && apt-get install -y ffmpeg
+
+RUN npm install 
+
+COPY . . 
+
+EXPOSE 3000 
+
+CMD ["npm", "start"]
+

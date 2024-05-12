@@ -1,1 +1,2 @@
-# Stream_Realm
+# Stream Realm
+A Streaming Service. 
